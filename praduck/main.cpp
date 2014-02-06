@@ -7,14 +7,11 @@
 //
 
 #include <iostream>
-#include "levelMap.h"
+#include "Game.h"
 
 using namespace std;
 
 int main() {
-    string filename = "/Users/aarondavis/Development/kumavis/cpp/f1rst/praduck/praduck/0.lvl";
-    LevelMap levelMap;
-    levelMap.load_map(filename);
-    cout << levelMap;
-    return 0;
+    Game game = Game();
+    game.start();
 }

@@ -14,8 +14,10 @@
 
 class EmptyTile: public BaseTile {
 public:
-    char representation = ' ';
-    bool traversable = true;
+    EmptyTile() {
+        representation = ' ';
+        traversable = true;
+    }
 };
 
 #endif /* defined(__praduck__EmptyTile__) */

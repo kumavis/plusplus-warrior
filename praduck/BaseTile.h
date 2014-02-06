@@ -16,7 +16,9 @@ using namespace std;
 
 class BaseTile {
 public:
-    char representation = 'y';
+    int x;
+    int y;
+    char representation = '?';
     bool traversable;
 };
 

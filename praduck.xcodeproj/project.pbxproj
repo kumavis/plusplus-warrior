@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772386AA189B0074008429DF /* levelmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386A9189B0074008429DF /* levelmap.cpp */; };
+		772386AA189B0074008429DF /* LevelMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386A9189B0074008429DF /* LevelMap.cpp */; };
 		772386B5189C5A8B008429DF /* BaseTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386B3189C5A8A008429DF /* BaseTile.cpp */; };
 		772386B8189C5B82008429DF /* WallTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386B6189C5B82008429DF /* WallTile.cpp */; };
 		772386BB189C5CA3008429DF /* EmptyTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386B9189C5CA3008429DF /* EmptyTile.cpp */; };
+		772386BE18A029AE008429DF /* CreatureTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386BC18A029AE008429DF /* CreatureTile.cpp */; };
+		772386C118A029F8008429DF /* PlayerTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386BF18A029F8008429DF /* PlayerTile.cpp */; };
+		772386C418A02B0B008429DF /* ExitTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386C218A02B0A008429DF /* ExitTile.cpp */; };
+		772386C718A02BDC008429DF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386C518A02BDC008429DF /* Game.cpp */; };
+		772386CD18A19A45008429DF /* TileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386CB18A19A45008429DF /* TileController.cpp */; };
+		772386D818A32B40008429DF /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 772386D618A32B40008429DF /* PlayerController.cpp */; };
 		77ABDEC51892E51C00618D05 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77ABDEC41892E51C00618D05 /* main.cpp */; };
 		77ABDEC71892E51C00618D05 /* praduck.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 77ABDEC61892E51C00618D05 /* praduck.1 */; };
 /* End PBXBuildFile section */
@@ -29,14 +35,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		772386A9189B0074008429DF /* levelmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = levelmap.cpp; sourceTree = "<group>"; };
-		772386AB189B0ADC008429DF /* levelmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelmap.h; sourceTree = "<group>"; };
+		772386A9189B0074008429DF /* LevelMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelMap.cpp; sourceTree = "<group>"; };
+		772386AB189B0ADC008429DF /* LevelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMap.h; sourceTree = "<group>"; };
 		772386B3189C5A8A008429DF /* BaseTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseTile.cpp; sourceTree = "<group>"; };
 		772386B4189C5A8B008429DF /* BaseTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTile.h; sourceTree = "<group>"; };
 		772386B6189C5B82008429DF /* WallTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WallTile.cpp; sourceTree = "<group>"; };
 		772386B7189C5B82008429DF /* WallTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallTile.h; sourceTree = "<group>"; };
 		772386B9189C5CA3008429DF /* EmptyTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmptyTile.cpp; sourceTree = "<group>"; };
 		772386BA189C5CA3008429DF /* EmptyTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyTile.h; sourceTree = "<group>"; };
+		772386BC18A029AE008429DF /* CreatureTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreatureTile.cpp; sourceTree = "<group>"; };
+		772386BD18A029AE008429DF /* CreatureTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureTile.h; sourceTree = "<group>"; };
+		772386BF18A029F8008429DF /* PlayerTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerTile.cpp; sourceTree = "<group>"; };
+		772386C018A029F8008429DF /* PlayerTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTile.h; sourceTree = "<group>"; };
+		772386C218A02B0A008429DF /* ExitTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExitTile.cpp; sourceTree = "<group>"; };
+		772386C318A02B0B008429DF /* ExitTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitTile.h; sourceTree = "<group>"; };
+		772386C518A02BDC008429DF /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		772386C618A02BDC008429DF /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		772386CB18A19A45008429DF /* TileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileController.cpp; sourceTree = "<group>"; };
+		772386CC18A19A45008429DF /* TileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileController.h; sourceTree = "<group>"; };
+		772386D618A32B40008429DF /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerController.cpp; sourceTree = "<group>"; };
+		772386D718A32B40008429DF /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
 		77ABDEC11892E51C00618D05 /* praduck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = praduck; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ABDEC41892E51C00618D05 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77ABDEC61892E51C00618D05 /* praduck.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = praduck.1; sourceTree = "<group>"; };
@@ -54,6 +72,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772386CE18A30B4E008429DF /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				772386BC18A029AE008429DF /* CreatureTile.cpp */,
+				772386BD18A029AE008429DF /* CreatureTile.h */,
+				772386BF18A029F8008429DF /* PlayerTile.cpp */,
+				772386C018A029F8008429DF /* PlayerTile.h */,
+				772386B3189C5A8A008429DF /* BaseTile.cpp */,
+				772386B4189C5A8B008429DF /* BaseTile.h */,
+				772386B6189C5B82008429DF /* WallTile.cpp */,
+				772386B7189C5B82008429DF /* WallTile.h */,
+				772386C218A02B0A008429DF /* ExitTile.cpp */,
+				772386C318A02B0B008429DF /* ExitTile.h */,
+				772386B9189C5CA3008429DF /* EmptyTile.cpp */,
+				772386BA189C5CA3008429DF /* EmptyTile.h */,
+			);
+			name = Tiles;
+			sourceTree = "<group>";
+		};
+		772386CF18A30B61008429DF /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				77ABDECD1892F60100618D05 /* 0.lvl */,
+			);
+			name = levels;
+			sourceTree = "<group>";
+		};
+		772386D918A331BD008429DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				772386CB18A19A45008429DF /* TileController.cpp */,
+				772386CC18A19A45008429DF /* TileController.h */,
+				772386D618A32B40008429DF /* PlayerController.cpp */,
+				772386D718A32B40008429DF /* PlayerController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		77ABDEB81892E51C00618D05 = {
 			isa = PBXGroup;
 			children = (
@@ -75,15 +131,13 @@
 			children = (
 				77ABDEC41892E51C00618D05 /* main.cpp */,
 				77ABDEC61892E51C00618D05 /* praduck.1 */,
-				77ABDECD1892F60100618D05 /* 0.lvl */,
-				772386A9189B0074008429DF /* levelmap.cpp */,
-				772386AB189B0ADC008429DF /* levelmap.h */,
-				772386B3189C5A8A008429DF /* BaseTile.cpp */,
-				772386B4189C5A8B008429DF /* BaseTile.h */,
-				772386B6189C5B82008429DF /* WallTile.cpp */,
-				772386B7189C5B82008429DF /* WallTile.h */,
-				772386B9189C5CA3008429DF /* EmptyTile.cpp */,
-				772386BA189C5CA3008429DF /* EmptyTile.h */,
+				772386CF18A30B61008429DF /* levels */,
+				772386A9189B0074008429DF /* LevelMap.cpp */,
+				772386AB189B0ADC008429DF /* LevelMap.h */,
+				772386CE18A30B4E008429DF /* Tiles */,
+				772386C518A02BDC008429DF /* Game.cpp */,
+				772386C618A02BDC008429DF /* Game.h */,
+				772386D918A331BD008429DF /* Controllers */,
 			);
 			path = praduck;
 			sourceTree = "<group>";
@@ -139,9 +193,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772386C718A02BDC008429DF /* Game.cpp in Sources */,
+				772386C118A029F8008429DF /* PlayerTile.cpp in Sources */,
 				772386B5189C5A8B008429DF /* BaseTile.cpp in Sources */,
+				772386CD18A19A45008429DF /* TileController.cpp in Sources */,
 				77ABDEC51892E51C00618D05 /* main.cpp in Sources */,
-				772386AA189B0074008429DF /* levelmap.cpp in Sources */,
+				772386BE18A029AE008429DF /* CreatureTile.cpp in Sources */,
+				772386AA189B0074008429DF /* LevelMap.cpp in Sources */,
+				772386C418A02B0B008429DF /* ExitTile.cpp in Sources */,
+				772386D818A32B40008429DF /* PlayerController.cpp in Sources */,
 				772386BB189C5CA3008429DF /* EmptyTile.cpp in Sources */,
 				772386B8189C5B82008429DF /* WallTile.cpp in Sources */,
 			);

@@ -14,8 +14,10 @@
 
 class WallTile: public BaseTile {
 public:
-    char representation = '#';
-    bool traversable = false;
+    WallTile() {
+        representation = '#';
+        traversable = false;
+    }
 };
 
 #endif /* defined(__praduck__WallTile__) */
