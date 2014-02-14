@@ -26,8 +26,31 @@ int TileController::MoveSouth() {
     return SetPosition(tile->x,tile->y+1);
 }
 int TileController::MoveWest() {
-    return SetPosition(tile->x+1,tile->y);
+    return SetPosition(tile->x-1,tile->y);
 }
 int TileController::MoveEast() {
-    return SetPosition(tile->x-1,tile->y);
+    return SetPosition(tile->x+1,tile->y);
+}
+
+int TileController::MoveDirection(int directionalIndex) {
+    bool movementStatus;
+    switch (directionalIndex) {
+        case 0: {
+            movementStatus = MoveNorth();
+            break;
+        }
+        case 1: {
+            movementStatus = MoveEast();
+            break;
+        }
+        case 2: {
+            movementStatus = MoveSouth();
+            break;
+        }
+        case 3: {
+            movementStatus = MoveWest();
+            break;
+        }
+    }
+    return movementStatus;
 }

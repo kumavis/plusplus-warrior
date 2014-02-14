@@ -17,15 +17,15 @@ class Game {
     string levelDir;
     void DrawMap();
 public:
-    Game() {
-        levelDir = "/Users/aarondavis/Development/kumavis/cpp/f1rst/praduck/praduck/";
-        map = new LevelMap();
-    }
+    Game();
+    ~Game();
     int levelIndex;
     LevelMap* map;
-    void start();
+    void Start();
+    bool RunLevel();
     void LoadLevel(int newLevelIndex);
     void RunEntities();
+    bool CheckSuccess();
 };
 
 #endif /* defined(__praduck__Game__) */

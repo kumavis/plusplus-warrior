@@ -20,6 +20,7 @@ public:
 
     }
     void Run();
+    int moveDirection = 0;
 };
     
 #endif /* defined(__praduck__PlayerController__) */

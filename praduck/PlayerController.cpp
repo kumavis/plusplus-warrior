@@ -8,7 +8,25 @@
 
 #include "PlayerController.h"
 
+///*
+ // turn right
 void PlayerController::Run() {
     DebugPosition();
-    MoveNorth();
+    bool wasAbleToMove = MoveDirection(moveDirection);
+    if (!wasAbleToMove) {
+        moveDirection += 1;
+        moveDirection = moveDirection % 4;
+    }
 }
+//*/
+
+/*
+ // random choice
+void PlayerController::Run() {
+    DebugPosition();
+    bool wasAbleToMove = MoveDirection(moveDirection);
+    if (!wasAbleToMove) {
+        moveDirection = rand() % 4;
+    }
+}
+*/

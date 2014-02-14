@@ -15,6 +15,7 @@
 class LevelMap;
 
 class TileController {
+private:
     BaseTile* tile;
     LevelMap* map;
     int SetPosition(int x, int y);
@@ -27,6 +28,8 @@ public:
     int MoveSouth();
     int MoveWest();
     int MoveEast();
+    // 0 - North, 1 - East, 2 - South, 3 - West
+    int MoveDirection(int directionalIndex);
     virtual void Run() = 0;
     void DebugPosition();
 };

@@ -12,6 +12,12 @@
 using namespace std;
 
 int main() {
-    Game game = Game();
-    game.start();
+//    while(1){
+        cout << "- - - - - - - -" << endl;
+        cout << "  Game Start! " << endl;
+        cout << "- - - - - - - -" << endl;
+        Game *game = new Game();
+        game->Start();
+        delete game;
+//    }
 }

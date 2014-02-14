@@ -55,10 +55,13 @@
 		772386CC18A19A45008429DF /* TileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileController.h; sourceTree = "<group>"; };
 		772386D618A32B40008429DF /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerController.cpp; sourceTree = "<group>"; };
 		772386D718A32B40008429DF /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		779C434D18A93E120013A9D9 /* 0.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.lvl; sourceTree = "<group>"; };
+		779C434E18A956AA0013A9D9 /* 2.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2.lvl; sourceTree = "<group>"; };
+		779C434F18A957900013A9D9 /* 3.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3.lvl; sourceTree = "<group>"; };
 		77ABDEC11892E51C00618D05 /* praduck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = praduck; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ABDEC41892E51C00618D05 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77ABDEC61892E51C00618D05 /* praduck.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = praduck.1; sourceTree = "<group>"; };
-		77ABDECD1892F60100618D05 /* 0.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.lvl; sourceTree = "<group>"; };
+		77ABDECD1892F60100618D05 /* 1.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.lvl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +97,10 @@
 		772386CF18A30B61008429DF /* levels */ = {
 			isa = PBXGroup;
 			children = (
-				77ABDECD1892F60100618D05 /* 0.lvl */,
+				779C434D18A93E120013A9D9 /* 0.lvl */,
+				77ABDECD1892F60100618D05 /* 1.lvl */,
+				779C434E18A956AA0013A9D9 /* 2.lvl */,
+				779C434F18A957900013A9D9 /* 3.lvl */,
 			);
 			name = levels;
 			sourceTree = "<group>";

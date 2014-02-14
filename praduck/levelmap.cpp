@@ -12,6 +12,29 @@
 
 using namespace std;
 
+#pragma mark - Constructor/Destructor
+
+LevelMap::~LevelMap() {
+    for (int x=0; x++; x < this->width) {
+        for (int y=0; y++; y < this->height) {
+            delete map[x][y];
+        }
+    }
+    for (int i=0; i++; i < this->creatureCount()) {
+        delete creatures[i];
+        delete controllers[i];
+    }
+}
+
+#pragma mark - Getters/Setters
+
+int LevelMap::creatureCount() {
+    return this->_creatureCount;
+}
+
+#pragma mark - Other
+
+
 void LoadFile(string filename, ifstream *input)
 {
     (*input).open(filename.c_str());
@@ -29,33 +52,39 @@ string GetLine(ifstream *input)
 }
 
 
-BaseTile* LevelMap::TileFromChar(char c)
+BaseTile* LevelMap::TileFromChar(char c, int x, int y)
 {
+    BaseTile* newTile;
     switch (c) {
         case '#': {
-            return new WallTile();
+            newTile = new WallTile();
             break;
         }
         case ' ': {
-            return new EmptyTile();
+            newTile = new EmptyTile();
             break;
         }
         case '@': {
             PlayerTile* player = new PlayerTile();
             TileController* controller = new PlayerController(player, this);
-            creatures[creatureCount] = player;
-            controllers[creatureCount] = controller;
-            creatureCount++;
-            return player;
+            creatures[_creatureCount] = player;
+            controllers[_creatureCount] = controller;
+            _creatureCount++;
+            newTile = player;
             break;
         }
         case '=': {
-            return new ExitTile();
+            goalX = x;
+            goalY = y;
+            newTile = new ExitTile();
             break;
         }
+        default: {
+            cerr << "tile not recognized" << endl;
+            newTile = new BaseTile();
+        }
     }
-    cerr << "tile not recognized" << endl;
-    return new BaseTile();
+    return newTile;
 }
 
 void LevelMap::SetTile (int x, int y, BaseTile* tile)
@@ -73,7 +102,9 @@ BaseTile* LevelMap::GetTile (int x, int y)
 int LevelMap::MoveTile(BaseTile* tile, int x, int y) {
     int oldX = tile->x;
     int oldY = tile->y;
-    if (GetTile(x,y)->traversable) {
+    BaseTile* targetTile = GetTile(x,y);
+    if (targetTile->traversable) {
+        delete targetTile;
         SetTile(x,y,tile);
         SetTile(oldX,oldY,new EmptyTile());
         return 1;
@@ -112,7 +143,7 @@ void LevelMap::LoadMap(string filename)
             x = 0;
             y++;
         } else {
-            BaseTile* tile = TileFromChar(c);
+            BaseTile* tile = TileFromChar(c,x,y);
             SetTile(x,y,tile);
             x++;
         }
